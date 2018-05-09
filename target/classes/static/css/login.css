@@ -1,0 +1,142 @@
+﻿/* 全局样式 */
+*{box-sizing: border-box;}
+body{
+    font-family: 'Microsoft YaHei','微软雅黑',SimSun,sans-serif;
+    min-width: 800px;
+}
+
+/* 随动背景hack */
+.div_login_bg{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    z-index: -1;
+}
+.img_login_bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+/* 标题 */
+.div_login_title{
+    height: 66px;
+    background: url(../images/login_title.png) no-repeat center center;
+    margin: 70px 0 60px 0;
+}
+@media screen and (min-height:800px){
+   .div_login_title{
+     margin: 170px 0 60px 0;  
+   } 
+}
+
+
+/* 登录表单部分 */
+.div_login_form{
+    margin: 0 auto;
+    width: 460px;
+    text-align: center;
+}
+.div_login_form>div{
+    position: relative;
+    width: 100%;
+    padding-bottom: 30px;
+    padding-right: 30px;
+    text-align: left;
+}
+
+
+.div_login_info{
+    font-size: 20px;
+    font-weight: 600;
+    color: #69b4ff;
+}
+
+.div_login_form>div>input[type="text"],
+.div_login_form>div>input[type="password"]{
+    display: inline-block;
+    width: 100%;
+    height: 34px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 10px;
+    color:#666666;
+    font-size: 16px;
+}
+
+.div_login_form>div>input[type="text"]:focus,
+.div_login_form>div>input[type="password"]:focus{
+    box-shadow: 0 0 0 1px #4d9cea;
+}
+
+.div_login_form>div>button{
+    width: 100%;
+    height: 40px;
+    background: #69b4ff;
+    border: none;
+    border-radius: 3px;
+    color:#fff;
+    font-size:  16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.div_login_form>div>button:hover{
+    background: #4d9cea;
+}
+
+/* 错误信息 */
+.div_login_form>div>.errorInfo{
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    color: #fff;
+    font-size: 12px;
+}
+.div_login_errorinfo{
+    background:url(../images/error_icon.png) no-repeat 440px 7px;
+}
+
+/* 底部信息*/
+.div_login_footer{
+    position: fixed;
+    left: 0;
+    right: 0;
+    height: 66px;
+    bottom: 0px;
+    background: url(../images/login_footer_qrcode.png) no-repeat 98% 10%;
+    margin: 0 auto;
+    font-size: 12px;
+    line-height: 25px;
+    color:#333333;
+    text-align: center;
+}
+
+@media screen and (min-height:700px){
+    .div_login_footer{
+        bottom:10px;
+    }
+ }
+
+@media screen and (min-height:800px){
+    .div_login_footer{
+        bottom:25px;
+    }
+ }
+
+.login_footer_record,.login_footer_website{
+    display: inline-block;
+    vertical-align: middle;
+    height: 25px;
+    width: 20px;
+}
+.login_footer_record{
+    background: url(../images/login_footer_record.png) no-repeat center center;
+}
+.login_footer_website{
+    background: url(../images/login_footer_website.png) no-repeat top;
+}
+

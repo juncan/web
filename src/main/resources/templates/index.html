@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Index</title>
+    <!-- 插件开始 -->
+    <link rel="stylesheet" href="/static/lib/normalize/normalize.min.css">
+    <link rel="stylesheet" href="/static/lib/layui/css/layui.css">
+    <!-- 插件结束 -->
+    <link rel="stylesheet" href="/static/css/sprite.css">
+    <link rel="stylesheet" href="/static/css/structure.css">
+</head>
+
+<body class="layui-layout-body body">
+    <div class="layui-layout layui-layout-admin">
+
+        <!-- 顶部开始 -->
+        <div class="layui-header header">
+            <div class="layui-logo logo">
+                <i class="structure 基础信息管理"></i>
+                基础信息配置管理系统
+            </div>
+            <ul class="layui-nav layui-layout-left  left">
+                <li class="layui-nav-item nav-item">
+                    <a href="#/BaseData">
+                        <i class="structure 基础数据管理"></i>
+                        <br> 基础数据管理
+                    </a>
+                </li>
+                <li class="layui-nav-item nav-item">
+                    <a href="#/SysPara">
+                        <i class="structure 系统参数配置"></i>
+                        <br> 系统参数配置
+                    </a>
+                </li>
+                <li class="layui-nav-item nav-item">
+                    <a href="#/Maintain">
+                        <i class="structure 运行维护管理"></i>
+                        <br> 运行维护管理
+                    </a>
+                </li>
+                <li class="layui-nav-item nav-item">
+                    <a href="#/SysSetting">
+                        <i class="structure 系统设置"></i>
+                        <br> 系统设置
+                    </a>
+                </li>
+            </ul>
+            <ul class="layui-nav layui-layout-right">
+                <li class="layui-nav-item nav-item">
+                    <a href="javascript:;" style="line-height:70px;">
+                        <i class="structure admin_pro"></i> admin
+                    </a>
+                    <dl class="layui-nav-child">
+                        <dd>
+                            <a href="javascript::">修改密码</a>
+                        </dd>
+                        <dd>
+                            <a href="/logout">退出</a>
+                        </dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+        <!-- 顶部结束 -->
+
+        <!-- 左边开始 -->
+        <div class="layui-side bg-gray">
+            <div class="layui-side-scroll">
+                <ul class="layui-nav layui-nav-tree" id="leftMenu">
+                </ul>
+            </div>
+        </div>
+        <!-- 左边结束 -->
+
+        <!-- 主体开始 -->
+        <div class="layui-body">
+            <div class="layui-tab layui-tab-card" lay-allowClose="true" lay-filter="main">
+                <ul class="layui-tab-title">
+                </ul>
+                <div class="layui-tab-content">
+                </div>
+            </div>
+        </div>
+        <!-- 主体结束 -->
+    </div>
+
+    <script src="/static/lib/director/director.min.js"></script>
+    <script src="/static/lib/lodash/lodash.3.10.1.js"></script>
+    <script src="/static/lib/layui/layui.js"></script>
+    <script>
+        layui.config({
+            base: '/static/modules/'
+        })
+            .extend({
+
+            })
+            .use('structure');
+    </script>
+</body>
+
+</html>

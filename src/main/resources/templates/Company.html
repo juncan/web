@@ -1,0 +1,187 @@
+<div class="layui-fluid">
+    <form class="layui-form" layui-filter="Company">
+        <div class="layui-row layui-col-space5">
+            <div class="layui-col-md12">
+                <label class="label">添加时间</label>
+                <div class="layui-show-md-inline-block">
+                    <select>
+                        <option value="all">全部</option>
+                        <option value="prev">上一个月</option>
+                    </select>
+                </div>
+                <label class="label">企业名称</label>
+                <div class="layui-show-md-inline-block">
+                    <input type="text" class="layui-input">
+                </div>
+                <label class="label">经营状态</label>
+                <div class="layui-show-md-inline-block">
+                    <select>
+                        <option value="all">全部</option>
+                        <option value="prev">上一个月</option>
+                    </select>
+                </div>
+                <div class="layui-show-md-inline-block">
+                    <a class="layui-btn btn-normal">查询</a>
+                    <a class="layui-btn btn-reset">重置</a>
+                    <a class="layui-btn btn-ghost">
+                        <i class="custom_icon 导出"></i>
+                    </a>
+                    <a class="layui-btn btn-ghost">
+                        <i class="custom_icon 新增"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="layui-fluid">
+    <div class="layui-row">
+        <table id="company_table" lay-filter="company_table"></table>
+    </div>
+</div>
+
+<script type="text/html" id="company_table_Bar">
+    <a class="layui-btn btn-ghost" lay-event="detail"><i class="custom_icon 详情"></i>查看</a>
+    <a class="layui-btn btn-ghost" lay-event="edit"><i class="custom_icon 编辑"></i>编辑</a>
+    <a class="layui-btn btn-ghost" lay-event="del"> <i class="custom_icon 删除"></i>删除</a>
+    
+    {{#  if(d.auth > 2){ }}
+      <a class="layui-btn layui-btn-mini" lay-event="check">审核</a>
+    {{#  } }}
+</script>
+
+<script>
+    layui.use(['form', 'table'], function (exports) {
+        'use strict';
+        var form = layui.form,
+            table = layui.table;
+
+        form.render(null, 'Company');
+
+        table.render({
+            elem: '#company_table'
+            , height: 'full-190'
+            , cols: [[
+                { type: 'numbers' }
+                , { field: 'id', title: 'ID', width: 80, sort: true }
+                , { field: 'username', title: '用户名' }
+                , { field: 'email', title: '邮箱' }
+                , { field: 'sign', title: '签名' }
+                , { field: 'sex', title: '性别' }
+                , { field: 'city', title: '城市' }
+                , { field: 'experience', title: '积分', sort: true }
+                , { field: 'action', title: '操作', toolbar: '#company_table_Bar' }
+            ]]
+            , data: [{
+                "id": "10001"
+                , "username": "杜甫"
+                , "email": "xianxin@layui.com"
+                , "sex": "男"
+                , "city": "浙江杭州"
+                , "sign": "人生恰似一场修行"
+                , "experience": "116"
+                , "ip": "192.168.0.8"
+                , "logins": "108"
+                , "joinTime": "2016-10-14"
+            }, {
+                "id": "10002"
+                , "username": "李白"
+                , "email": "xianxin@layui.com"
+                , "sex": "男"
+                , "city": "浙江杭州"
+                , "sign": "人生恰似一场修行"
+                , "experience": "12"
+                , "ip": "192.168.0.8"
+                , "logins": "106"
+                , "joinTime": "2016-10-14"
+                , "LAY_CHECKED": true
+            }, {
+                "id": "10003"
+                , "username": "王勃"
+                , "email": "xianxin@layui.com"
+                , "sex": "男"
+                , "city": "浙江杭州"
+                , "sign": "人生恰似一场修行"
+                , "experience": "65"
+                , "ip": "192.168.0.8"
+                , "logins": "106"
+                , "joinTime": "2016-10-14"
+            }, {
+                "id": "10004"
+                , "username": "贤心"
+                , "email": "xianxin@layui.com"
+                , "sex": "男"
+                , "city": "浙江杭州"
+                , "sign": "人生恰似一场修行"
+                , "experience": "666"
+                , "ip": "192.168.0.8"
+                , "logins": "106"
+                , "joinTime": "2016-10-14"
+            }, {
+                "id": "10005"
+                , "username": "贤心"
+                , "email": "xianxin@layui.com"
+                , "sex": "男"
+                , "city": "浙江杭州"
+                , "sign": "人生恰似一场修行"
+                , "experience": "86"
+                , "ip": "192.168.0.8"
+                , "logins": "106"
+                , "joinTime": "2016-10-14"
+            }, {
+                "id": "10006"
+                , "username": "贤心"
+                , "email": "xianxin@layui.com"
+                , "sex": "男"
+                , "city": "浙江杭州"
+                , "sign": "人生恰似一场修行"
+                , "experience": "12"
+                , "ip": "192.168.0.8"
+                , "logins": "106"
+                , "joinTime": "2016-10-14"
+            }, {
+                "id": "10007"
+                , "username": "贤心"
+                , "email": "xianxin@layui.com"
+                , "sex": "男"
+                , "city": "浙江杭州"
+                , "sign": "人生恰似一场修行"
+                , "experience": "16"
+                , "ip": "192.168.0.8"
+                , "logins": "106"
+                , "joinTime": "2016-10-14"
+            }, {
+                "id": "10008"
+                , "username": "贤心"
+                , "email": "xianxin@layui.com"
+                , "sex": "男"
+                , "city": "浙江杭州"
+                , "sign": "人生恰似一场修行"
+                , "experience": "106"
+                , "ip": "192.168.0.8"
+                , "logins": "106"
+                , "joinTime": "2016-10-14"
+            }]
+            , skin: 'line'
+            , even: true
+            , page: {
+                prev: '上一页',
+                next: '下一页',
+                layout: ['count', 'page', 'prev', 'next', 'skip'],
+                theme: '#5AF'
+            }
+            , limits: [5, 7, 10]
+            , limit: 5
+        });
+
+        table.on('tool(company_table)', function (obj) {
+            var data = obj.data;
+            var layEvent = obj.event;
+            var tr = obj.tr;
+
+            console.log(data);
+            console.log(layEvent);
+            console.log(tr);
+        });
+    });
+</script>

@@ -1,0 +1,49 @@
+/* sprite.css 雪碧图CSS */
+.structure{display: inline-block;vertical-align: middle;background:url(../images/structure.png)  no-repeat;}
+.structure.基础信息管理{height:32px;width:32px;background-position:-374px 0;}
+.structure.系统设置{height:27px;width:24px;background-position:-272px 0;vertical-align: bottom;}
+.structure.系统参数配置{height:27px;width:24px;background-position:-296px 0;vertical-align: bottom;}
+.structure.运行维护管理{height:27px;width:25px;background-position:-320px 0;vertical-align: bottom;}
+.structure.基础数据管理{height:27px;width:29px;background-position:-345px 0;vertical-align: bottom;}
+.structure.企业管理_n{height:16px;width:16px;background-position:0 0;}
+.structure.区域管理_a{height:16px;width:16px;background-position:-16px 0;}
+.structure.运价信息_n{height:16px;width:16px;background-position:-32px 0;}
+.structure.企业管理_a{height:16px;width:16px;background-position:-48px 0;}
+.structure.人员管理_n{height:16px;width:16px;background-position:-64px 0;}
+.structure.运价信息_a{height:16px;width:16px;background-position:-80px 0;}
+.structure.区域管理_n{height:16px;width:16px;background-position:-96px 0;}
+.structure.人员管理_a{height:16px;width:16px;background-position:-112px 0;}
+.structure.基础设施_n{height:16px;width:16px;background-position:-128px 0;}
+.structure.车辆管理_a{height:16px;width:16px;background-position:-144px 0;}
+.structure.车辆管理_n{height:16px;width:16px;background-position:-160px 0;}
+.structure.车队管理_a{height:16px;width:16px;background-position:-176px 0;}
+.structure.admin_pro{height:17px;width:16px;background-position:-192px 0;}
+.structure.基础设施_a{height:16px;width:16px;background-position:-208px 0;}
+.structure.车队管理_n{height:16px;width:16px;background-position:-224px 0;}
+.structure.乘客信息_a{height:16px;width:16px;background-position:-240px 0;}
+.structure.乘客信息_n{height:16px;width:16px;background-position:-256px 0;}
+.custom_icon{display: inline-block;vertical-align: middle;background:url(../images/custom_icon.png)  no-repeat;margin:0 5px;}
+.custom_icon.下一页{height:8px;width:5px;background-position:0 0;}
+.custom_icon.tab关闭{height:6px;width:6px;background-position:0 -8px;}
+.custom_icon.下拉三角{height:4px;width:7px;background-position:0 -14px;}
+.custom_icon.right{height:14px;width:8px;background-position:0 -18px;}
+.custom_icon.left{height:14px;width:8px;background-position:0 -32px;}
+.custom_icon.选框下拉箭头{height:5px;width:8px;background-position:0 -46px;}
+.custom_icon.left2{height:14px;width:8px;background-position:0 -51px;}
+.custom_icon.禁用{height:13px;width:12px;background-position:0 -65px;}
+.custom_icon.删除{height:15px;width:12px;background-position:0 -78px;}
+.custom_icon.icon_新增2{height:12px;width:12px;background-position:0 -93px;}
+.custom_icon.详情{height:14px;width:12px;background-position:0 -105px;}
+.custom_icon.关闭{height:13px;width:13px;background-position:0 -119px;}
+.custom_icon.多边{height:14px;width:13px;background-position:0 -132px;}
+.custom_icon.编辑{height:16px;width:13px;background-position:0 -146px;}
+.custom_icon.收起{height:14px;width:14px;background-position:0 -162px;}
+.custom_icon.新增{height:14px;width:14px;background-position:0 -176px;}
+.custom_icon.圆{height:14px;width:14px;background-position:0 -190px;}
+.custom_icon.方{height:14px;width:14px;background-position:0 -204px;}
+.custom_icon.返回上一页{height:14px;width:14px;background-position:0 -218px;}
+.custom_icon.启用{height:10px;width:14px;background-position:0 -232px;}
+.custom_icon.历史订单{height:16px;width:15px;background-position:0 -242px;}
+.custom_icon.pro{height:18px;width:17px;background-position:0 -258px;}
+.custom_icon.导出{height:16px;width:18px;background-position:0 -276px;}
+.custom_icon.上传{height:40px;width:40px;background-position:0 -292px;}

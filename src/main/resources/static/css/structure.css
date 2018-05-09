@@ -1,0 +1,154 @@
+/* structure.css 框架CSS,定义框架样式,追加覆盖layui样式 */
+/* 颜色备注:{主菜单:#183049,主菜单按下:#284a6d,主标题:#5af,icon文字:#4385cb,异常状态文字:#fb6708,二级菜单背景:#ebeff2,选择框边框:#e8e8e8,部分文字:#489944} */
+/* 全局区域 */
+*{
+    box-sizing: border-box;
+    font-family: 'Microsoft YaHei','微软雅黑',SimSun,sans-serif;
+}
+/* 全局区域 */
+
+/* 顶部区域 */
+.header{
+    height: 70px;
+    background: #183049 !important;
+}
+.header .logo{
+    width: 300px;
+    padding-left: 30px;
+    line-height: 70px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 22px;
+}
+.header .left{
+    left: 300px;
+}
+.header .nav-item{
+    height: 70px;
+    line-height: 35px !important;
+}
+.header .nav-item:hover, .header .layui-this{
+    background: #284a6d;
+}
+.header dd.layui-this a{
+    background: transparent;
+}
+.header .nav-item>a{
+    color: #fff;
+    text-align: center;
+}
+.header .layui-nav-bar,.layui-nav .layui-this:after{
+    background-color: #5af !important;
+}
+.header .layui-nav-more{
+    display: none;
+}
+.header .layui-nav-child{
+    top: 70px;
+}
+.header .left .layui-nav-child dd.layui-this a{
+    background-color: #284A6D !important;
+}
+.header .layui-layout-right .layui-nav-child dd.layui-this a{
+    background-color: #ebeff2 !important;
+    color: #333;
+}
+
+/* 顶部区域 */
+
+/* 左边区域 */
+.bg-gray{
+    width:125px !important;
+    top: 70px !important;
+    background: #ebeff2 !important;
+}
+.bg-gray .layui-side-scroll{
+    width: 145px;
+}
+.bg-gray .layui-nav-tree{
+    width: 125px;
+}
+.bg-gray .layui-nav-bar{
+    display: none;
+}
+.layui-side .nav-item{
+    background: #ebeff2;
+}
+.layui-side .nav-item a{
+    color: #333 !important;
+    padding: 0 15px 0 10px;
+}
+.layui-side .nav-item a i{
+    margin: 0 10px 0 5px;
+}
+.layui-side .nav-item a:hover,
+.layui-side .layui-nav-tree .layui-this a,
+.layui-side .layui-nav-itemed .layui-nav-child a,
+.layui-side .layui-nav-itemed dd.layui-this a{
+    background: #ebeff2 ;
+    color:#183049;
+}
+.layui-side .layui-nav-more{
+    border-color: #999 transparent transparent;
+}
+.layui-side .layui-nav-more:hover{
+    border-color: #183049 transparent transparent;
+}
+.layui-side .layui-nav-itemed .layui-nav-more{
+    border-color:  transparent transparent #183049; 
+}
+/* 左边区域 */
+
+/* 主体区域 */
+.body .layui-show-md-inline-block{
+    vertical-align: middle;
+}
+.body .layui-layout-admin .layui-body{
+    top: 70px;
+    bottom: 0px;
+    left: 125px;
+}
+.body .layui-body>.layui-tab{
+    margin: 0;
+    height: 100%;
+}
+.body .layui-body>.layui-tab>.layui-tab-content{
+    height: calc(100% - 40px);
+}
+.body .layui-tab-card>.layui-tab-more .layui-this{
+    color:#333;
+}
+.body .label{
+    margin: 0 5px;
+}
+.body .btn-normal {
+    width:80px;
+    background: #5af;
+    color:#fff;
+}
+.body .btn-reset{
+    width:80px;
+    background: #fff;
+    color: #5af;
+    border:1px solid #5af;
+}
+.body .btn-reset:hover{
+    color:#333;
+}
+.body .btn-ghost{
+    margin: 0 auto;
+    padding: 0;
+    background: transparent;
+    color:#4385cb;
+}
+.body .layui-table-cell .layui-btn{
+    height: 28px;
+    line-height: 28px;
+}
+.body .layui-form-select dl dd.layui-this{
+    background: #5af;
+}
+.body .layui-table-page{
+    text-align: right;
+}
+/* 主体区域 */

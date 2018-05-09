@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>出租汽车服务管理平台</title>
+    <link rel="shortcut icon" href="/static/images/favicon.ico" />
+    <script type="text/javascript" src="/static/js/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" href="/static/lib/normalize/normalize.min.css">
+    <link rel="stylesheet" href="/static/css/login.css">
+</head>
+
+<body>
+    <!-- 背景hack -->
+    <div class="div_login_bg">
+        <img class="img_login_bg" src="/static/images/login_bg.png">
+    </div>
+    <!-- 标题 -->
+    <div class="div_login_title"></div>
+    <!-- 表单主体 -->
+    <div class="div_login_form">
+        <div class="div_login_info">
+            | 欢迎登录
+        </div>
+        <div>
+            <input type="text" placeholder="登录名" id="ipt_name" />
+        </div>
+        <div>
+            <input type="password" placeholder="密码" id="pwd_pass" />
+        </div>
+        <div>
+            <input type="text" placeholder="验证码" style="width:60%;" id="ipt_vercode" value="1"/>
+            <img src="" alt="验证码" style="vertical-align:bottom;" height="30px" width="35%" />
+        </div>
+        <div>
+            <button id="btn_login">登&emsp;录</button>
+        </div>
+    </div>
+    <!-- 底部信息 -->
+
+    <script src="/static/js/util.js"></script>
+    <script>
+        ; !(function () {
+            /**
+             * 提示错误信息
+             **/
+            function showError(dom, txt) {
+                var span = document.createElement('span');
+                span.className = 'errorInfo';
+                span.innerHTML = txt;
+                dom.parentNode.appendChild(span);
+                dom.parentNode.className = 'div_login_errorinfo';
+                dom.style.border = '2px solid #ff7c08';
+
+                setTimeout(function () {
+                    dom.parentNode.removeChild(span);
+                    dom.parentNode.className = '';
+                    dom.style.border = '';
+                }, 2000);
+            }
+
+            /**
+             * 登录
+             **/
+            function handleLogin() {
+                var flag = true;
+                var name = document.querySelector('#ipt_name').value,
+                    pass = document.querySelector('#pwd_pass').value,
+                    vercode = document.querySelector('#ipt_vercode').value;
+
+                if (name === '') {
+                    showError(document.querySelector('#ipt_name'), '登录名不能为空！');
+                    flag = false;
+                }
+
+                if (pass === '') {
+                    showError(document.querySelector('#pwd_pass'), '密码不能为空！');
+                    flag = false;
+                }
+
+                if (vercode === '') {
+                    showError(document.querySelector('#ipt_vercode'), '验证码不能为空！');
+                    flag = false;
+                }
+                if (flag){
+                    $.ajax({
+                        type: 'POST',
+                        url: '',
+                        data:{username:name,password:pass,code:vercode},
+                        success: function (result) {
+                           window.location.href = "/";
+                        },
+                        error : function() {
+                            alert("异常！");
+                        }
+                    });
+                }
+            }
+
+            document.querySelector('#btn_login').addEventListener('click', handleLogin);
+        }());
+    </script>
+</body>
+
+</html>
